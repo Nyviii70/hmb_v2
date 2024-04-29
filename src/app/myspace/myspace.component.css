@@ -14,7 +14,7 @@ header {
     color: rgb(84,43,136);
   }
 
-ul {
+.nav {
     gap: 15px;
     display: flex;
     justify-content: space-around;
@@ -48,7 +48,71 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 324px;
+    padding-top: 125px;
+}
+
+.informations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: space-evenly;
+}
+
+.pdp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.informations-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+}
+
+.infos-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+.infos-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.buttons-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 80px;
+}
+
+.delete-button {
+    height: 30px;
+    width: 165px;
+    border-radius: 7px;
+    background-color: rgb(169, 70, 70);
+    cursor: pointer;
+    border: solid rgb(169, 70, 70);
+    color: rgb(59 28 28);
+}
+
+.update-button {
+    height: 30px;
+    width: 165px;
+    border-radius: 7px;
+    background-color: rgb(73, 131, 73);
+    cursor: pointer;
+    border: solid rgb(73, 131, 73);
+    color: rgb(28 53 28)
 }
 
 footer {
