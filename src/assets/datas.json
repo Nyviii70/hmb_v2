@@ -1,0 +1,20 @@
+    [
+        {
+          "id": 1,
+          "title": "Les fleurs du mal",
+          "author": "Guy de Maupassant",
+          "read": false
+        },
+        {
+          "id": 2,
+          "title": "Les misérables",
+          "author": "Victor Hugo",
+          "read": true
+        },
+        {
+          "id": 3,
+          "title": "Les femmes savantes",
+          "author": "Molière",
+          "read": false
+        }
+    ]

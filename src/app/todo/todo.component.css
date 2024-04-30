@@ -14,6 +14,10 @@ header {
     color: rgb(84,43,136);
   }
 
+  button {
+    all: unset;
+  }
+
 .navbar {
     gap: 15px;
     display: flex;
@@ -21,6 +25,15 @@ header {
     align-items: center;
     background-color: rgb(189, 142, 249);
     height: 35px;
+}
+
+.add-button {
+    border-radius: 5px;
+    background-color: rgb(70 0 159 / 77%);
+    color: rgb(207 207 207);
+    font-weight: 500;
+    padding: 3px;
+    cursor: pointer;
 }
 
 li {
@@ -46,7 +59,36 @@ li :hover {
     opacity: 50%;
     border-radius: 5px;
     width: 100%;
-    height: 20px;
+    height: 30px;
+    justify-content: space-between;
+    padding-left: 5px;
+    color: rgb(51, 25, 84);
+    font-weight: bold;
+}
+
+.action-button-container {
+    width: 211px;
+}
+
+.update-button{
+    border-radius: 5px;
+    margin-right: 54px;
+    background-color: rgb(70 0 159 / 77%);
+    color: rgb(207 207 207);
+    font-weight: 500;
+    padding-right: 3px;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+.delete-button{
+    border-radius: 5px;
+    background-color: rgb(70 0 159 / 77%);
+    color: rgb(207 207 207);
+    font-weight: 500;
+    padding-right: 3px;
+    padding-left: 3px;
+    cursor: pointer;
 }
 
 a {
@@ -66,8 +108,32 @@ a {
 .text {
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
+    height: 250px;
+    width: 100%;
     align-items: center;
-    padding-top: 324px;
+    justify-content: space-around;
+}
+
+
+.add-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.add-forms {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
 }
 
 footer {

@@ -23,14 +23,36 @@
     <div class="content-page">
         <div class="text">
             <h1>Ma liste de lecture</h1>
+            <h2>Ajouter un titre à la liste</h2>
+            <div class="add-container">
+                <form class="add-forms" (submit)="createReading(title.value, author.value, read.checked)">
+                    <div>
+                        <label for="title">Titre</label>
+                        <input type="text" name="title" #title required>
+                    </div>
+                    <div>
+                        <label for="author">Auteur</label>
+                        <input type="text" name="author" #author required>
+                    </div>
+                    <div>
+                        <label for="read">Lu</label>
+                        <input type="checkbox" name="read" #read>
+                    </div>
+                    <button type="submit" class="add-button">Enregistrer</button>
+                </form>
+              </div>
         </div>
         <div class="content-list">
             <ul class="todos">
-                <li class="todo"><input type="checkbox" id="checkbox" name="checkbox"></li>
-                <li class="todo"><input type="checkbox" id="checkbox" name="checkbox"></li>
-                <li class="todo"><input type="checkbox" id="checkbox" name="checkbox"></li>
+              <li *ngFor="let reading of readings" class="todo">
+                {{ reading.title }} - {{ reading.author }} - {{ reading.read ? 'Lu' : 'Non lu' }}
+                <div class="action-button-container">
+                    <button type="button" (click)="updateReadingStatus(reading)" class="update-button">Modifier</button>
+                    <button type="button" (click)="deleteReading(reading.id)" class="delete-button">Supprimer</button>
+                </div>
+              </li>
             </ul>
-        </div>
+          </div>
     </div>
     <footer>
         <p>Existence future</p>
