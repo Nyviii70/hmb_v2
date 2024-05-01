@@ -25,27 +25,34 @@
             <h1>Ma liste de lecture</h1>
             <h2>Ajouter un titre à la liste</h2>
             <div class="add-container">
-                <form class="add-forms" (submit)="createReading(title.value, author.value, read.checked)">
+                <form class="add-forms" (submit)="createReading(title.value, author.value,read.checked, description.value)">
                     <div>
-                        <label for="title">Titre</label>
+                        <label for="title">Titre &nbsp;</label>
                         <input type="text" name="title" #title required>
                     </div>
                     <div>
-                        <label for="author">Auteur</label>
+                        <label for="author">Auteur &nbsp;</label>
                         <input type="text" name="author" #author required>
                     </div>
                     <div>
-                        <label for="read">Lu</label>
-                        <input type="checkbox" name="read" #read>
+                        <label for="description">Description &nbsp;</label>
+                        <input type="text" name="description" #description required>
+                    </div>
+                    <div>
+                        <label for="read">Lu &nbsp;</label>
+                        <input type="checkbox" name="read" #read [ngModel]="false" (ngModelChange)="read = $event">
                     </div>
                     <button type="submit" class="add-button">Enregistrer</button>
                 </form>
               </div>
         </div>
+        <hr class="divider">
         <div class="content-list">
             <ul class="todos">
               <li *ngFor="let reading of readings" class="todo">
-                {{ reading.title }} - {{ reading.author }} - {{ reading.read ? 'Lu' : 'Non lu' }}
+                <p class="title-author">{{ reading.title }} - {{ reading.author }}</p>
+                <p class="description">{{reading.description}}</p>
+                <p class="status">{{ reading.read ? 'Lu' : 'Non lu' }}</p>
                 <div class="action-button-container">
                     <button type="button" (click)="updateReadingStatus(reading)" class="update-button">Modifier</button>
                     <button type="button" (click)="deleteReading(reading.id)" class="delete-button">Supprimer</button>

@@ -3,18 +3,21 @@
           "id": 1,
           "title": "Les fleurs du mal",
           "author": "Baudelaire",
-          "read": false
+          "read": false,
+          "description": "Recueil de poèsie"
         },
         {
           "id": 2,
           "title": "Les misérables",
           "author": "Victor Hugo",
-          "read": true
+          "read": true,
+          "description": "La vie parisienne et ses misères"
         },
         {
           "id": 3,
           "title": "Les femmes savantes",
           "author": "Molière",
-          "read": false
+          "read": false,
+          "description": "Une satire comme on les aime"
         }
     ]

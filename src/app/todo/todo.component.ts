@@ -27,8 +27,11 @@ export class TodoComponent implements OnInit{
      });
   }
 
-  createReading(title: string, author: string, read: boolean): void {
-    const newReading: Omit<Reading, 'id'> = { title, author, read }; // Crée un nouvel objet Reading avec les valeurs du formulaire
+  createReading(title: string, author: string, read: boolean, description: string): void {
+    const isRead = read;
+
+    const newReading: Omit<Reading, 'id'> = { title, author, read: isRead, description }; // Crée un nouvel objet Reading avec les valeurs du formulaire
+
     this.readingsService.createReading(newReading as Reading)
         .subscribe(reading => {
             this.readings.push(reading); // Ajoute la nouvelle lecture à la liste existante

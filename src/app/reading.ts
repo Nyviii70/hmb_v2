@@ -3,4 +3,5 @@ export interface Reading {
     title: string;
     author: string;
     read: boolean;
+    description: string;	
 }

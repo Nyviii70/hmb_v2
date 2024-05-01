@@ -36,6 +36,14 @@ header {
     cursor: pointer;
 }
 
+.divider {
+    border: none;
+    border-top: 1px solid rgb(70 0 159);
+    width: 520px;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
 li {
     display: inline;
 }
@@ -66,6 +74,17 @@ li :hover {
     font-weight: bold;
 }
 
+.title-author {
+    width: 300px;
+}
+
+.description {
+    width: 300px;
+}
+
+.status {
+    width: 100px;
+}
 .action-button-container {
     width: 211px;
 }
